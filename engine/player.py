@@ -1,5 +1,5 @@
-from .base import BaseModel, CIRCLE, CROSS
-from .board import BoardModel
+from engine.base import BaseModel, CIRCLE, CROSS
+from engine.board import BoardModel
 from typing import Union
 
 class PlayerModel(BaseModel):
@@ -9,4 +9,5 @@ class PlayerModel(BaseModel):
 
         self.mark_symbol = mark_symbol
         self.id = id
+        self.data = {'id': id, 'mark_symbol': mark_symbol}
 

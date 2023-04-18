@@ -13,12 +13,12 @@ class Database:
 
     def initialize(self):
         queries = [
-            '''CREATE TABLE games IF NOT EXISTS 
-            (id INTEGER PRIMARY KEY AUTO_INCREMENT, game_id TEXT NOT NULL, players TEXT NOT NULL, board TEXT NOT NULL, status INTEGER NOT NULL, winner INTEGER NOT NULL, last_step INTEGER NOT NULL)
+            '''CREATE TABLE IF NOT EXISTS games 
+            (id INTEGER PRIMARY KEY AUTOINCREMENT, game_id TEXT NOT NULL, players TEXT NOT NULL, board TEXT NOT NULL, status INTEGER NOT NULL, winner INTEGER NOT NULL, last_step INTEGER NOT NULL)
             ''',
 
-            '''CREATE TABLE players IF NOT EXISTS
-            (id INTEGER PRIMARY KEY AUTO_INCREMENT, name TEXT NOT NULL, wins INTEGER NOT NULL DEFAULT '0', loses INTEGER NOT NULL DEFAULT '0')
+            '''CREATE TABLE IF NOT EXISTS players 
+            (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, wins INTEGER NOT NULL DEFAULT '0', loses INTEGER NOT NULL DEFAULT '0')
             '''
         ]
         for query in queries:

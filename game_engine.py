@@ -23,8 +23,8 @@ class GameEngine:
         letters = string.ascii_letters + string.digits
         return "".join([random.choice(letters) for i in range(length)])
 
-    def new_game(self, players: list[int], diagonal: int = 3) -> GameModel:
-        if len(players) == self.PLAYERS_REQUIRED:
+    def new_game(self, players: list[int, int], diagonal: int = 3) -> GameModel:
+        if len(players) != self.PLAYERS_REQUIRED:
             raise Exception(f"There are {self.PLAYERS_REQUIRED} required!")
 
         marks = [CIRCLE, CROSS]
@@ -40,7 +40,8 @@ class GameEngine:
                              'players': self.to_json([player.source for player in players]),
                              'board': board.to_json,
                              'status': IN_PROCESS,
-                             'winner': 0
+                             'winner': 0,
+                             'last_step': 0
                              }
             self.connected_database.create_game(**database_data)
         return self.BOARD_GAMES[random_id]

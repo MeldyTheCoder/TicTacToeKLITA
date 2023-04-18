@@ -1,6 +1,6 @@
 import math
-from .base import BaseModel, CIRCLE, CROSS, BOARD_TYPE, MIN_DIAGONAL, NONE
-from .combination import Combination
+from engine.base import BaseModel, CIRCLE, CROSS, BOARD_TYPE, MIN_DIAGONAL, NONE
+from engine.combination import Combination
 
 class BoardModel(BaseModel):
     def __init__(self, configured_board: BOARD_TYPE = None, diagonal: int = 3):
@@ -26,7 +26,7 @@ class BoardModel(BaseModel):
         combinations_new = []
 
         for combination in combinations:
-            combinations_new.extend(combination)
+            combinations_new.extend(combination.source)
 
         return Combination(combinations_new)
 
@@ -55,8 +55,10 @@ class BoardModel(BaseModel):
         vertical_combinations, horizontal_combinations, diagonal_combinations = self.combinations()
         combinations = self.extended_combinations(vertical_combinations, horizontal_combinations, diagonal_combinations)
 
+        winner_mark = None
         for combination in combinations:
             values = set(self.data[index]['selected'] for index in combination)
             if len(values) == 1 and NONE not in values:
-                return values.pop()
-            return None
+                winner_mark = values.pop()
+                break
+        return winner_mark
