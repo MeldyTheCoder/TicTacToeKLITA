@@ -204,3 +204,119 @@ Traceback (most recent call last):
 aiogram.utils.exceptions.InvalidQueryID: Query is too old and response timeout expired or query id is invalid
 2023-04-19 00:33:45,633 [MainThread  ] [INFO ]  Stop polling...
 2023-04-19 00:33:45,634 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 16:15:31,426 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 16:15:31,733 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 16:15:31,733 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 16:15:38,410 [MainThread  ] [ERROR]  Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'int' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 18, in start
+    player_is_busy = game.is_player_busy(message.from_user.id)
+  File "D:\PythonProjects\TicTacToeKLITA\engine.py", line 75, in is_player_busy
+    if self.is_player_in_game(game.game_id, player_id) and game.status in [IN_PROCESS]:
+  File "D:\PythonProjects\TicTacToeKLITA\models\game.py", line 25, in status
+    if self.winner:
+  File "D:\PythonProjects\TicTacToeKLITA\models\game.py", line 37, in winner
+    winner_mark = self.board.get_winner()
+  File "D:\PythonProjects\TicTacToeKLITA\models\board.py", line 129, in get_winner
+    combinations = self.extended_combinations()
+  File "D:\PythonProjects\TicTacToeKLITA\models\board.py", line 70, in extended_combinations
+    + self.diagonal_combinations.source
+  File "D:\PythonProjects\TicTacToeKLITA\models\board.py", line 77, in diagonal_combinations
+    for cell in self.total_cells:
+TypeError: 'int' object is not iterable
+2023-04-19 16:15:52,725 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 16:15:52,725 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 16:15:54,110 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 16:15:54,272 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 16:15:54,273 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 16:17:47,770 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 16:17:47,771 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 16:19:23,134 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 16:19:23,304 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 16:19:23,304 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 17:55:08,405 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 17:55:08,406 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 17:55:11,778 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 17:55:22,384 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 17:55:23,622 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 17:55:23,803 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 17:55:23,804 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 18:18:02,550 [MainThread  ] [ERROR]  Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 986, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1056, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1041, in create_connection
+    sock = await self._connect_sock(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 955, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\proactor_events.py", line 702, in sock_connect
+    return await self._proactor.connect(sock, address)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py", line 812, in _poll
+    value = callback(transferred, key, ov)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py", line 599, in finish_connect
+    ov.getresult()
+OSError: [WinError 121] Превышен таймаут семафора
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\client.py", line 1138, in __aenter__
+    self._resp = await self._coro
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\client.py", line 535, in _request
+    conn = await self._connector.connect(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 542, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 907, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 1206, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 1175, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 992, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 142, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2023-04-19 19:10:30,323 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 19:10:30,323 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 19:10:51,130 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 19:10:51,315 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 19:10:51,315 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 19:12:14,139 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 19:12:14,139 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 19:12:15,325 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 19:12:15,488 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 19:12:15,488 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 19:13:06,301 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 19:13:06,302 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 19:20:13,847 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 19:20:14,031 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 19:20:14,032 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 19:20:58,282 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 19:20:58,283 [MainThread  ] [WARNI]  Goodbye!

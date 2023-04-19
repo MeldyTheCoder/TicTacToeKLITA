@@ -1,5 +1,7 @@
+import asyncio
 import json
 import config
+import filters
 from aiogram import types, Bot, Dispatcher, executor
 from engine import GameEngine
 from models import exceptions
@@ -13,7 +15,7 @@ game = GameEngine(True)
 kbs = Keyboards()
 debugger = Debug()
 
-@dp.message_handler(content_types=['text'], commands=['start'])
+@dp.message_handler(filters.isPublic(), content_types=['text'], commands=['start'])
 async def start(message: types.Message):
     player_is_busy = game.is_player_busy(message.from_user.id)
     if player_is_busy:
@@ -24,12 +26,16 @@ async def start(message: types.Message):
     kb = kbs.new_game()
     await message.reply(text, reply_markup=kb)
 
-@dp.callback_query_handler(lambda query: json.loads(query.data)['action'] == 'new_game')
+@dp.callback_query_handler(filters.query('new_game'), filters.isPublicQuery())
 async def new_game(query: types.CallbackQuery):
     data = json.loads(query.data)
     player_is_busy = game.is_player_busy(query.from_user.id)
     if player_is_busy:
         text = '♐️ Дурак, ты еще не закончил прошлую игру!'
+        return await app.answer_callback_query(query.id, text, show_alert=True)
+
+    if not query.message.reply_to_message.from_user.id == query.from_user.id:
+        text = '🚫 Не твоя кнопка, ишак ебаный!'
         return await app.answer_callback_query(query.id, text, show_alert=True)
 
     if 'diag' not in data:
@@ -41,7 +47,7 @@ async def new_game(query: types.CallbackQuery):
     kb = kbs.accept_game_keyboard(board=data['diag'])
     await app.edit_message_text(text, query.message.chat.id, query.message.message_id, reply_markup=kb)
 
-@dp.callback_query_handler(lambda query: json.loads(query.data)['action'] == 'accept_game')
+@dp.callback_query_handler(filters.query('accept_game'), filters.isPublicQuery())
 async def accept_game(query: types.CallbackQuery):
     data = json.loads(query.data)
 
@@ -65,9 +71,11 @@ async def accept_game(query: types.CallbackQuery):
     await app.edit_message_text(text, query.message.chat.id, query.message.message_id, reply_markup=kb)
 
 
-@dp.callback_query_handler(lambda query: json.loads(query.data)['action'] == 'select')
+@dp.callback_query_handler(filters.query('select'), filters.isPublicQuery())
 async def select_cell(query: types.CallbackQuery):
     data = json.loads(query.data)
+    await asyncio.sleep(1.2)
+
     try:
         game_data = game.get_game_from_database(id=data['id'])
         game.select(game_data.game_id, query.from_user.id, data['pos'])

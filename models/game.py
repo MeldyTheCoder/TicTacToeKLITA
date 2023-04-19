@@ -1,4 +1,5 @@
-from models.base import BaseModel, IN_PROCESS, CLOSED, DRAW
+from models.base import BaseModel
+from models.constants import IN_PROCESS, CLOSED, DRAW
 from models.player import PlayerModel
 from models.board import BoardModel
 from models import exceptions

@@ -5,7 +5,7 @@ import string
 import config
 from typing import Union
 from models.board import BoardModel
-from models.base import CIRCLE, CROSS, IN_PROCESS
+from models.constants import CIRCLE, CROSS, IN_PROCESS
 from models.player import PlayerModel
 from models.game import GameModel
 from models.database import Database

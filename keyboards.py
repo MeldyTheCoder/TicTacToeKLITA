@@ -1,6 +1,6 @@
 import json
 from models.board import BoardModel
-from models.base import NONE, CIRCLE, CROSS
+from models.constants import NONE, CIRCLE, CROSS
 from config import BOARD_DIAGONALS_AVAILABLE
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 

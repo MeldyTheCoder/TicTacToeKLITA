@@ -1,5 +1,5 @@
-from models.base import BaseModel, CIRCLE, CROSS
-from models.board import BoardModel
+from models.base import BaseModel
+from models.constants import CIRCLE, CROSS
 from models import exceptions
 from typing import Union
 
