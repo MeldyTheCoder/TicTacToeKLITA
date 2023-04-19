@@ -15,6 +15,12 @@ game = GameEngine(True)
 kbs = Keyboards()
 debugger = Debug()
 
+@dp.message_handler(content_types=['text'], commands=['source'])
+async def source(message: types.Message):
+    url = 'https://github.com/MeldyTheCoder/TicTacToeKLITA'
+    text = f'🧑‍💻 <b>Открытый код этой залупы</b>: <a href="{url}">ссылка</a>'
+    return await message.reply(text)
+
 @dp.message_handler(filters.isPublic(), content_types=['text'], commands=['start'])
 async def start(message: types.Message):
     player_is_busy = game.is_player_busy(message.from_user.id)
