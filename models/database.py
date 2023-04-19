@@ -1,15 +1,23 @@
 import os
 import sqlite3
 from typing import Union
+from models import exceptions
 
 class Database:
     def __init__(self, path: Union[str, os.PathLike] = ""):
         if not os.path.exists(path):
-            raise Exception(f"Path %{path}% doesnt exist!")
+            raise exceptions.NoDatabaseFoundException(path)
 
         self.db = sqlite3.connect(path)
         self.cursor = self.db.cursor()
+        self.cursor.row_factory = self.__dict_factory
         self.initialize()
+
+    def __dict_factory(self, cursor, row):
+        d = {}
+        for idx, col in enumerate(cursor.description):
+            d[col[0]] = row[idx]
+        return d
 
     def initialize(self):
         queries = [
@@ -25,12 +33,12 @@ class Database:
             self.cursor.execute(query, ())
             self.db.commit()
 
-    def create_game(self, **options):
+    def create_game(self, **options) -> int:
         query = 'INSERT INTO games ({}) VALUES ({})'
         args = []
         args_str = []
         if not options:
-            raise Exception("No arguments passed!")
+            raise exceptions.DatabaseNoArgumentsPassed()
 
         for key, val in options.items():
             args.append(val)
@@ -39,6 +47,7 @@ class Database:
         query = query.format(", ".join(args_str), ', '.join('?' * len(args_str)))
         self.cursor.execute(query, args)
         self.db.commit()
+        return self.cursor.lastrowid
 
 
     def update_game(self, game_id: str, **options):
@@ -46,7 +55,7 @@ class Database:
         args = []
         args_str = []
         if not options:
-            raise Exception("No arguments passed!")
+            raise exceptions.DatabaseNoArgumentsPassed()
         for key, val in options.items():
             args.append(val)
             args_str.append(f"{key} = ?")
@@ -60,7 +69,7 @@ class Database:
         args_str = []
         args = []
         if not options:
-            raise Exception("No arguments passed!")
+            raise exceptions.DatabaseNoArgumentsPassed()
         for key, val in options.items():
             args.append(val)
             args_str.append(f"{key} = ?")

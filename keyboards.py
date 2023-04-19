@@ -1,6 +1,7 @@
 import json
-from engine.board import BoardModel
-from engine.base import NONE, CIRCLE, CROSS
+from models.board import BoardModel
+from models.base import NONE, CIRCLE, CROSS
+from config import BOARD_DIAGONALS_AVAILABLE
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
@@ -15,12 +16,12 @@ class Keyboards:
 
     def new_game_categories(self):
         kb = InlineKeyboardMarkup(row_width=2)
-        kb.add(
-            InlineKeyboardButton(text="3x3", callback_data=json.dumps({'action': 'new_game', 'diag': 3})),
-            InlineKeyboardButton(text='4x4', callback_data=json.dumps({'action': 'new_game', 'diag': 4})),
-            InlineKeyboardButton(text='5x5', callback_data=json.dumps({'action': 'new_game', 'diag': 5}))
-        )
-
+        buttons = [
+            InlineKeyboardButton(text=f"{diagonal}x{diagonal}",
+                                 callback_data=json.dumps({'action': 'new_game', 'diag': diagonal}))
+            for diagonal in BOARD_DIAGONALS_AVAILABLE
+        ]
+        kb.add(*buttons)
         return kb
 
     def board_keyboard(self, game_id: int, board: BoardModel):

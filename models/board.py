@@ -1,14 +1,19 @@
 import math
-from engine.base import BaseModel, CIRCLE, CROSS, BOARD_TYPE, MIN_DIAGONAL, NONE
-from engine.combination import Combination
+from models.base import BaseModel, CIRCLE, CROSS, BOARD_TYPE, MIN_DIAGONAL, NONE
+from models.combination import Combination
+from models import exceptions
+from typing import Union
+from collections import Counter
 
 class BoardModel(BaseModel):
+    MARKS_TO_WIN = 3
+
     def __init__(self, configured_board: BOARD_TYPE = None, diagonal: int = 3):
         self.data = configured_board if configured_board else self.__empty_board(diagonal=diagonal)
 
     def __empty_board(self, diagonal: int):
         if diagonal < MIN_DIAGONAL:
-            raise Exception("Invalid diagonal value!")
+            raise exceptions.InvalidBoardDiagonalException(MIN_DIAGONAL)
 
         total_cells = int(math.pow(diagonal, 2))
         board = [{"selected": NONE, "id": cell} for cell in range(total_cells)]
@@ -30,6 +35,7 @@ class BoardModel(BaseModel):
 
         return Combination(combinations_new)
 
+
     def combinations(self) -> tuple[Combination, Combination, Combination]:
         total_cells, cells_in_row = self.total_cells, self.diagonal
 
@@ -41,24 +47,30 @@ class BoardModel(BaseModel):
 
     def select(self, choice: str, id: int):
         if choice not in [CROSS, CIRCLE]:
-            raise Exception("Invalid choice option!")
+            raise exceptions.MarkSymbolException(choice)
 
         total_cells, diagonal = self.total_cells, self.diagonal
 
         if id < 0 or id > total_cells:
-            raise Exception(f"There is no cell with position %{id}%!")
+            raise exceptions.BoardCellNotFound(id)
+
+        if self.data[id]['selected'] not in [NONE]:
+            raise exceptions.BoardCellAlreadySelected(id)
 
         self.data[id]["selected"] = choice
         return BoardModel(self.data)
 
-    def get_winner(self):
+    @property
+    def all_cells_selected(self) -> bool:
+        return len(list(filter(lambda cell: cell['selected'] in [CROSS, CIRCLE], self.data))) == self.total_cells
+
+    def get_winner(self) -> Union[CROSS, CIRCLE, NONE]:
         vertical_combinations, horizontal_combinations, diagonal_combinations = self.combinations()
         combinations = self.extended_combinations(vertical_combinations, horizontal_combinations, diagonal_combinations)
 
-        winner_mark = None
         for combination in combinations:
-            values = set(self.data[index]['selected'] for index in combination)
-            if len(values) == 1 and NONE not in values:
-                winner_mark = values.pop()
-                break
-        return winner_mark
+            values = list(self.data[index]['selected'] for index in combination)
+            points = Counter(values).most_common(3)
+            if points[0][1] == self.MARKS_TO_WIN and points[0][0] in [CROSS, CIRCLE]:
+                return points[0][0]
+        return NONE
