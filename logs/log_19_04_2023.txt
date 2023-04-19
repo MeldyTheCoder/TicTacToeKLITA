@@ -1,0 +1,206 @@
+2023-04-19 00:02:30,821 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:02:31,001 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:02:31,001 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:04:01,296 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:04:01,296 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:04:02,468 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:04:02,651 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:04:02,651 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:04:16,924 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:04:16,925 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:04:19,001 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:04:19,190 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:04:19,190 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:04:27,761 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:04:27,761 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:04:29,640 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:04:29,815 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:04:29,815 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:04:38,607 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:04:38,607 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:05:30,726 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:05:30,901 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:05:30,901 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:05:52,190 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:05:52,190 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:05:53,323 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:05:59,811 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:06:00,861 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:06:01,061 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:06:01,061 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:06:09,317 [MainThread  ] [ERROR]  Task exception was never retrieved
+future: <Task finished name='Task-20' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError('list indices must be integers or slices, not str')>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 52, in accept_game
+    game_object, database_id = game.new_game([query.from_user.id, query.message.reply_to_message.from_user.id], data['diag'])
+  File "D:\PythonProjects\TicTacToeKLITA\engine.py", line 37, in new_game
+    self.BOARD_GAMES[random_id] = new_game
+TypeError: list indices must be integers or slices, not str
+2023-04-19 00:06:50,823 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:06:50,824 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:06:52,095 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:06:52,301 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:06:52,301 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:06:56,795 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:06:56,796 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:06:57,925 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:06:58,098 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:06:58,099 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:07:05,144 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:07:05,144 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:07:06,362 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:07:06,539 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:07:06,539 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:11:29,046 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:11:29,046 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:11:30,237 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:11:30,412 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:11:30,412 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:15:54,086 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:15:54,087 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:15:55,255 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:15:55,426 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:15:55,427 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:18:29,687 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:18:29,688 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:18:30,901 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:18:31,074 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:18:31,074 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:20:07,225 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:20:07,225 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:20:12,688 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:20:18,374 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:20:19,454 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:20:19,631 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:20:19,632 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:23:01,224 [MainThread  ] [ERROR]  Flood control exceeded. Retry in 19 seconds.
+Traceback (most recent call last):
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 88, in select_cell
+    return await app.edit_message_reply_markup(query.message.chat.id, query.message.message_id, reply_markup=kb)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\bot.py", line 2902, in edit_message_reply_markup
+    result = await self.request(api.Methods.EDIT_MESSAGE_REPLY_MARKUP, payload)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 111, in check_result
+    raise exceptions.RetryAfter(parameters.retry_after)
+aiogram.utils.exceptions.RetryAfter: Flood control exceeded. Retry in 19 seconds.
+2023-04-19 00:23:40,801 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:23:40,801 [MainThread  ] [WARNI]  Goodbye!
+2023-04-19 00:30:28,035 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-19 00:30:28,217 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-19 00:30:28,217 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:31:28,931 [MainThread  ] [ERROR]  Flood control exceeded. Retry in 12 seconds.
+Traceback (most recent call last):
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 79, in select_cell
+    return await app.edit_message_text(text, query.message.chat.id, query.message.message_id, reply_markup=None)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\bot.py", line 2772, in edit_message_text
+    result = await self.request(api.Methods.EDIT_MESSAGE_TEXT, payload)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 111, in check_result
+    raise exceptions.RetryAfter(parameters.retry_after)
+aiogram.utils.exceptions.RetryAfter: Flood control exceeded. Retry in 12 seconds.
+2023-04-19 00:32:07,802 [MainThread  ] [ERROR]  Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 986, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1056, in create_connection
+    raise exceptions[0]
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1041, in create_connection
+    sock = await self._connect_sock(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 955, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\proactor_events.py", line 702, in sock_connect
+    return await self._proactor.connect(sock, address)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py", line 812, in _poll
+    value = callback(transferred, key, ov)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\asyncio\windows_events.py", line 599, in finish_connect
+    ov.getresult()
+OSError: [WinError 121] Превышен таймаут семафора
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\client.py", line 1138, in __aenter__
+    self._resp = await self._coro
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\client.py", line 535, in _request
+    conn = await self._connector.connect(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 542, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 907, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 1206, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 1175, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiohttp\connector.py", line 992, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 142, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2023-04-19 00:32:13,029 [MainThread  ] [ERROR]  Task exception was never retrieved
+future: <Task finished name='Task-146' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=InvalidQueryID('Query is too old and response timeout expired or query id is invalid')>
+Traceback (most recent call last):
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 73, in select_cell
+    game.select(game_data.game_id, query.from_user.id, data['pos'])
+  File "D:\PythonProjects\TicTacToeKLITA\engine.py", line 86, in select
+    game.select(player_id, pos)
+  File "D:\PythonProjects\TicTacToeKLITA\models\game.py", line 77, in select
+    raise exceptions.PlayerAlreadySteppedException()
+models.exceptions.PlayerAlreadySteppedException: Player has been already stepped!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 100, in select_cell
+    return await app.answer_callback_query(query.id, text, show_alert=True)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\bot.py", line 2540, in answer_callback_query
+    return await self.request(api.Methods.ANSWER_CALLBACK_QUERY, payload)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\bot\api.py", line 115, in check_result
+    exceptions.BadRequest.detect(description)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.InvalidQueryID: Query is too old and response timeout expired or query id is invalid
+2023-04-19 00:33:45,633 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:33:45,634 [MainThread  ] [WARNI]  Goodbye!

@@ -1,0 +1,164 @@
+2023-04-18 22:22:11,934 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 22:22:12,126 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 22:22:12,126 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 22:22:20,101 [MainThread  ] [ERROR]  tuple indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 72, in select_cell
+    game_data = game.get_game_from_database(id=data['id'])
+  File "D:\PythonProjects\TicTacToeKLITA\engine.py", line 102, in get_game_from_database
+    game['board'] = BoardModel(self.from_json(game['board']))
+TypeError: tuple indices must be integers or slices, not str
+2023-04-18 22:22:35,815 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 22:22:35,816 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 22:22:37,061 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 22:22:37,269 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 22:22:37,269 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 22:22:40,254 [MainThread  ] [ERROR]  tuple indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 72, in select_cell
+    game_data = game.get_game_from_database(id=data['id'])
+  File "D:\PythonProjects\TicTacToeKLITA\engine.py", line 103, in get_game_from_database
+    game['board'] = BoardModel(self.from_json(game['board']))
+TypeError: tuple indices must be integers or slices, not str
+2023-04-18 22:24:24,718 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 22:24:24,718 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 22:24:25,962 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 22:24:26,157 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 22:24:26,157 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 22:26:03,047 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 22:26:03,047 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 22:26:04,266 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 22:26:04,440 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 22:26:04,440 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 22:26:30,034 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 22:26:30,035 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 22:26:31,216 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 22:26:31,375 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 22:26:31,376 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 22:39:37,471 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 22:39:37,471 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:16:12,597 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:16:12,828 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:16:12,829 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:16:43,264 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:16:43,264 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:16:44,569 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:16:44,776 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:16:44,777 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:29:51,883 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:29:51,883 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:29:53,430 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:29:53,692 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:29:53,693 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:30:19,598 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:30:19,599 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:30:21,192 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:30:21,383 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:30:21,383 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:30:49,622 [MainThread  ] [ERROR]  Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=AttributeError("'NoneType' object has no attribute 'id'")>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 49, in accept_game
+    print(query.message.forward_from.id)
+AttributeError: 'NoneType' object has no attribute 'id'
+2023-04-18 23:31:08,670 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:31:08,670 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:31:10,594 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:31:10,770 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:31:10,771 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:31:30,891 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:31:30,892 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:32:37,247 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:32:37,435 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:32:37,435 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:33:14,588 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:33:14,588 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:33:15,848 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:33:22,006 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:33:23,244 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:33:23,434 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:33:23,434 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:33:59,033 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:33:59,033 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:34:00,192 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:34:00,363 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:34:00,363 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:34:20,641 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:34:20,641 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:34:21,851 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:34:22,049 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:34:22,050 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:36:30,667 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:36:30,668 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:36:31,934 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:36:32,117 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:36:32,117 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:39:09,817 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:39:09,817 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:39:10,959 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:39:11,137 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:39:11,137 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:40:22,612 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:40:22,612 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:40:23,975 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:40:24,180 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:40:24,180 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:48:51,371 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:48:51,371 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:48:52,864 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:48:53,037 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:48:53,037 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:48:56,895 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:48:56,895 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:53:14,888 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:53:15,078 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:53:15,079 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:57:35,056 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:57:35,056 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:57:36,288 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:57:36,471 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:57:36,471 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:57:39,342 [MainThread  ] [ERROR]  Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=OperationalError('incomplete input')>
+Traceback (most recent call last):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python39\lib\site-packages\aiogram\dispatcher\handler.py", line 116, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "D:\PythonProjects\TicTacToeKLITA\main.py", line 18, in start
+    player_is_busy = game.is_player_busy(message.from_user.id)
+  File "D:\PythonProjects\TicTacToeKLITA\engine.py", line 70, in is_player_busy
+    games = self.get_games_from_database(status=IN_PROCESS)
+  File "D:\PythonProjects\TicTacToeKLITA\engine.py", line 117, in get_games_from_database
+    games = self.connected_database.get_games(**options)
+  File "D:\PythonProjects\TicTacToeKLITA\models\database.py", line 89, in get_games
+    self.cursor.execute(query, args)
+sqlite3.OperationalError: incomplete input
+2023-04-18 23:57:59,265 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:57:59,265 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:58:00,511 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:58:00,687 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:58:00,687 [MainThread  ] [INFO ]  Start polling.
+2023-04-18 23:58:51,651 [MainThread  ] [INFO ]  Stop polling...
+2023-04-18 23:58:51,651 [MainThread  ] [WARNI]  Goodbye!
+2023-04-18 23:58:52,784 [MainThread  ] [INFO ]  ========= STARTED =========
+2023-04-18 23:58:52,974 [MainThread  ] [INFO ]  Bot: 🟣 KLITA Tic-Tac-Toe 🟣 [@KlitaTicTacToeBot]
+2023-04-18 23:58:52,974 [MainThread  ] [INFO ]  Start polling.
+2023-04-19 00:02:12,081 [MainThread  ] [INFO ]  Stop polling...
+2023-04-19 00:02:12,082 [MainThread  ] [WARNI]  Goodbye!
